@@ -31,7 +31,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'devise'
+gem 'launchy'
 
+gem 'selenium-webdriver'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -48,9 +51,15 @@ end
 group :test,:development do
     gem 'rspec-rails'
     gem 'factory_girl_rails'
+    
+    gem 'spork-rails'
+    gem 'guard-spork'
+    gem 'childprocess'
 end
 group :test do
     gem 'shoulda-matchers'
+    gem 'capybara'
 end
+gem 'slim-rails'
 
-
+gem 'guard-rspec'
